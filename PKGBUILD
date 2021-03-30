@@ -30,9 +30,7 @@ depends=(fontconfig libxtst gtk3 python cairo alsa-lib nss gcc-libs libnotify li
 optdepends=('gvfs: For move to trash functionality' 'libdbusmenu-glib: For KDE global menu')
 provides=('codium')
 
-sha256sums_x86_64=(
-    "131ece3924b406eef62e7241a62247268cfc59e6f427f5e283da0febf6d9629a"
-)
+sha256sums_x86_64=("SKIP")
 
 pkgfile="VSCodium-linux-x64-$(echo $(curl -s https://github.com/VSCodium/vscodium/releases/latest | cut -d \" -f 2) | grep -o '[0-9].*').tar.gz"
 source_x86_64=("https://github.com/VSCodium/vscodium/releases/download/$pkgver/$pkgfile")
