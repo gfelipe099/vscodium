@@ -59,7 +59,9 @@ Keywords=vscode;
 Name=New Empty Window
 Exec=/usr/share/${pkgname}/bin/codium --no-sandbox --new-window %F
 Icon=vscodium" > ${srcdir}/${pkgname}.desktop
-    mkdir ../pkg
+    if [ ! -d ../pkg ]; then
+        mkdir ../pkg
+    fi
     chmod 750 ../pkg/
     cp -r -p ${srcdir} ${pkgdir}
 }
